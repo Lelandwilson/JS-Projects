@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather & Calendar App</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="weather.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="corner">
+      <img
+        id="toggleMenu-icon"
+        src="./images/menu-white.svg"
+        alt="Toggle Menu"
+      />
+    </div>
+    <!-- Title Section -->
+    <div id="titleSection" class="title-section">
+      <div id="title-left">
+        <div class="flex-row">
+          <!-- <img id="toggleMenu" src="./images/menu-white.svg" alt="Toggle Menu" /> -->
+          <h1 id="appTitle">CSE2WDX - Calendar App</h1>
+        </div>
+      </div>
+      <div id="title-right">
+        <span id="userName">[ User Name ]</span>
+        <div id="timeDate">Time: Day/Month</div>
+      </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+      <ul>
+        <li><a href="#" id="showWeather">Weather</a></li>
+        <li><a href="#" id="showCalendar">Calendar</a></li>
+      </ul>
+      <div class="footer-side">Made by<br />Leland Wilson</div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content">
+      <!-- Weather View or Calendar View will be dynamically loaded here -->
+    </div>
+    
+    <footer id="mainFooter">
+      <!-- <div class="footer-left">Made by<br />Leland Wilson</div> -->
+      <div class="footer-left">
+      <p>CSE2WDX - A3</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://validator.w3.org/#validate_by_input">
+            <img
+              src="./images/valid-html-blue.png"
+              id="validHTML"
+              alt="Validator icon for html"
+            />
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/validator.html.en">
+            <img
+              src="./images/vcss-blue.png"
+              id="validCSS"
+              alt="Validator icon for css"
+            />
+          </a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <script src="weather.js"></script>
+    <script src="geolocation.js"></script>
+  </body>
+</html>

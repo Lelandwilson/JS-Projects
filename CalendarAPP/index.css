@@ -1,0 +1,185 @@
+/* Global Settings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif; /* Updated font family */
+  background-color: #f2f2f2; /* Soft White */
+}
+
+/* Text, Headers */
+.text,
+h1,
+h2,
+p {
+  color: #444544; /* Dark Gray */
+}
+
+#corner {
+  background-color: #191a19; /* Dark Green */
+  height: 70px;
+}
+/* Title Section */
+.title-section {
+  position: fixed;
+  top: 0;
+  /* left: 180px; */
+  left: 20vw;
+  right: 0;
+  height: 70px;
+  background-color: #191a19; /* Dark Green */
+  color: #f2f2f2; /* Soft White */
+  transition: left 0.5s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 40px;
+  /* border: solid red; */
+}
+
+.title-section .left,
+.title-section .right {
+  margin: 0 20px;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 180px;
+  height: calc(100vh - 70px); /* Adjust the height */
+  background-color: #d3d3d3;
+  transition: width 0.5s;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-side {
+  flex-shrink: 0; /* Prevents this from shrinking */
+  margin-bottom: 10px;
+  border-top: #f2f2f2 solid 1px;
+  color: #444544;
+  height: 55px;
+  padding: 10px 0px 0px 20px;
+  margin-bottom: 0px;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0 10px;
+  flex: 1; /* Takes up remaining space */
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.side-menu li a {
+  display: block;
+  padding: 15px;
+  color: #444544; /* Dark Gray */
+  text-decoration: none;
+}
+
+#toggleMenu-icon {
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 210px;
+  margin-top: 50px;
+  background-color: #f2f2f2;
+  transition: margin-left 0.5s;
+  border: solid red;
+}
+
+#appTitle {
+  font-weight: 300;
+  margin-top: 0px;
+  color: #5afe73;
+  margin: 8px 50px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#mainFooter {
+  margin-left: 180px;
+  transition: margin-left 0.5s;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  border-top: #d3d3d3 solid 1px;
+  color: #444544;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  padding-left: 20px;
+  
+}
+
+.footer-right {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  
+}
+
+
+/* Mobile view: Less than or equal to 768px */
+@media (max-width: 768px) {
+  .side-menu {
+    height: 200px;
+    width: 120px;
+    border-bottom-right-radius: 10px;
+    overflow-x: hidden;
+    background-color: rgba(211, 211, 211, 0.5);
+  }
+
+  .footer-side {
+    display: none;
+  }
+
+  #title-right {
+    font-size: smaller;
+  }
+
+  #appTitle {
+    font-size: x-large;
+  }
+
+  .title-section {
+    left: 10px;
+  }
+
+  .main-content {
+    margin-left: 100px;
+  }
+
+  #mainFooter {
+    margin-left: 0;
+    border: none;
+  }
+  .footer-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+  }
+}
+
+/* Desktop view: More than 768px */
+@media (min-width: 769px) {
+}
